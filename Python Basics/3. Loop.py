@@ -107,7 +107,6 @@ while (m <= 10):
     m += 1
 
 # for loop inside while loop :
-
 cnt = 1
 while(cnt <= 5):
     for i in range(3):
@@ -117,5 +116,46 @@ while(cnt <= 5):
     
 # break and continue :
 
-while true:
-    n = input("Enter any number ()")
+#
+while True:
+    n = input("Enter any number(0 to Exit)): ")
+    n = int(n)
+    if(n == 0):
+        break;
+    print("Square of", n, "is", n * n)
+    
+#   
+while True:
+    n = input("Enter any number(0 to Exit)): ")
+    n = int(n)
+    if(n < 0):
+        print("Only positive number pls")
+        continue
+    if(n == 0):
+        break;
+    print("Square of", n, "is", n * n)
+
+###
+terminate = False ###
+while not terminate:
+    num1 = input("enter first number: ")
+    num1 = int(num1)
+    num2 = input("enter the second number: ")
+    num2 = int(num2)
+    
+    while True:
+        operation = input("pls enter add/sub or quit to exit:")
+        if operation == "quit":
+            terminate = True ###
+            break
+        if operation not in ["add", "sub"]:
+            print("unknown operation")
+            continue
+        if operation == "add":
+            print("result is :", num1 + num2)
+            break
+        if operation == "sub":
+            print("result is :", num1 - num2)
+            break
+
+
