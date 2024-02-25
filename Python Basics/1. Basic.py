@@ -10,6 +10,9 @@ print(num1 + num2)
 s = 'abc 123'
 print(s)
 
+# printing datatype
+print(type(s))
+
 print(5 / 2)
 print(5 // 2) # int part of the ans
 print(5 % 2)
