@@ -67,4 +67,20 @@ with open("fb.html", "w", encoding=response.encoding) as f:
     f.write(response.text) # works very fine
 
 
-# now browser e directly open korte
+
+# now file ta directly browser e open korte chaile
+
+import requests
+import os
+import webbrowser as wb
+
+url = "https://www.facebook.com/"
+response = requests.get(url)
+
+with open("fbook.html", "w", encoding=response.encoding) as f:
+    f.write(response.text)
+
+filepath = os.path.realpath("fbook.html") # will give the path of the file
+print(filepath) # C:\Users\User\PycharmProjects\pythonProject\fbook.html
+
+wb.open("file://" + filepath) # directly opens the webpage in browser
