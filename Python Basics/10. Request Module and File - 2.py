@@ -10,3 +10,8 @@ with open("pybook.png", "wb") as f: # wb = write binary
 
 
 
+# command line argument
+
+# command line thekei jeno chobir link ar filename deya jaay
+# so that, baar baar chobir link ar naam change na kora laage
+
