@@ -17,7 +17,7 @@ class Vehicle:
     def brake(self):
         print(self.name, "is stopping!")
 
-if __name__ == "__main__":
+if __name__ == "__main__":       # works fine without this line ...
     v1 = Vehicle("Veyron", "Bugatti", "Black")
     v2 = Vehicle("Softail Delux", "Harley-Davidson", "Blue")
     v3 = Vehicle("Mustang 5.0 GT Coupe", "Ford", "Red")
@@ -32,7 +32,5 @@ if __name__ == "__main__":
     v1.brake() # Veyron is stopping!
     v2.brake() # Softail Delux is stopping!
     v3.brake() # Mustang 5.0 GT Coupe is stopping!
-
-
 
 
