@@ -52,3 +52,30 @@ with open(file_name, "wb") as f:
 # command line: python hello.py http://goo.gl/Q7LmXw career.png
 
 # this will download a photo from that link and name that file career.png
+
+
+
+# downloading books from web
+# page 55
+
+import requests
+import sys
+
+base_url = "http://subeen.com/download/"
+
+info_data = {"name": "abcd", "email": "abcd@gmail.com", "country": "Bangladesh"}
+
+url = base_url + "process.php"
+
+response = requests.post(url, data=info_data) # data nam argument diye pathacchi
+
+if response.ok is False:
+    sys.exit("error downloading filee :(")
+
+with open("cpbook.pdf", "wb") as fp:
+    fp.write(response.content)
+
+print("book download complete ;)")
+
+# do not work: error downloading filee :(
+# maybe error with link
