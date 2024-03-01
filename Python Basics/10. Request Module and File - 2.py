@@ -70,7 +70,7 @@ url = base_url + "process.php"
 response = requests.post(url, data=info_data) # data nam argument diye pathacchi
 
 if response.ok is False:
-    sys.exit("error downloading filee :(")
+    sys.exit("error downloading filee :(") # we can use exit() of sys module to terminate the program
 
 with open("cpbook.pdf", "wb") as fp:
     fp.write(response.content)
