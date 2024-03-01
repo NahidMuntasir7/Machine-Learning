@@ -1,4 +1,4 @@
-# making the vehicle class
+# making the Vehicle class
 
 class Vehicle:
     """base class for all vehicles"""
@@ -36,7 +36,7 @@ if __name__ == "__main__":       # works fine without this line ...
 
 
 
-# making the vehicle class
+# Car class inherits from Vehicle class
 
 class Vehicle:
     """base class for all vehicles""" # docstring
@@ -56,7 +56,7 @@ class Vehicle:
         print(self.name, "is stopping!")
 
 
-# creating the car class
+# creating the Car class
 
 class Car(Vehicle):  # Car class inherits Vehicle class
     """Car class"""
