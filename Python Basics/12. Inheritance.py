@@ -34,3 +34,38 @@ if __name__ == "__main__":       # works fine without this line ...
     v3.brake() # Mustang 5.0 GT Coupe is stopping!
 
 
+
+
+# making the vehicle class
+
+class Vehicle:
+    """base class for all vehicles""" # docstring
+
+    def __init__(self, name, manufacturer, color):
+        self.name = name
+        self.manufacturer = manufacturer
+        self.color = color
+
+    def drive(self):
+        print("Driving", self.manufacturer, self.name)
+
+    def turn(self, direction):
+        print("turning", self.name, "to", direction)
+
+    def brake(self):
+        print(self.name, "is stopping!")
+
+
+# creating the car class
+
+class Car(Vehicle):  # Car class inherits Vehicle class
+    """Car class"""
+    def change_gear(self, gear_name):
+        """method of changing gear"""
+        print(self.name, "is changing gear to", gear_name)
+
+if __name__ == "__main__":
+    c = Car("Mustang 5.0 GT Coupe", "Ford", "Red") # using it's parents constructor
+    c.drive() # Driving Ford Mustang 5.0 GT Coupe
+    c.brake() # Mustang 5.0 GT Coupe is stopping!
+    c.change_gear("p") # Mustang 5.0 GT Coupe is changing gear to p
