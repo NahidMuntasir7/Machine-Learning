@@ -38,6 +38,7 @@ if __name__ == "__main__":       # works fine without this line ...
 
 # Car class inherits from Vehicle class
 
+
 class Vehicle:
     """base class for all vehicles""" # docstring
 
@@ -69,3 +70,51 @@ if __name__ == "__main__":
     c.drive() # Driving Ford Mustang 5.0 GT Coupe
     c.brake() # Mustang 5.0 GT Coupe is stopping!
     c.change_gear("p") # Mustang 5.0 GT Coupe is changing gear to p
+
+
+
+
+# now a constructor of Car class 
+
+class Vehicle:
+    """base class for all vehicles""" # docstring
+
+    def __init__(self, name, manufacturer, color):
+        self.name = name
+        self.manufacturer = manufacturer
+        self.color = color
+
+    def drive(self):
+        print("Driving", self.manufacturer, self.name)
+
+    def turn(self, direction):
+        print("turning", self.name, "to", direction)
+
+    def brake(self):
+        print(self.name, "is stopping!")
+
+
+# creating the car class with a constructor
+
+class Car(Vehicle):  # Car class inherits Vehicle class
+    """Car class"""
+
+    def __init__(self, name, manufacturer, color, year):
+        self.name = name
+        self.manufacturer = manufacturer
+        self.color = color
+        self.year = 2017
+        self.wheels = 4
+        print("a new car has been created. name:", self.name)
+        print("it has", self.wheels, "wheels")
+        print("the car was built in", self.year)
+    def change_gear(self, gear_name):
+        """method of changing gear"""
+        print(self.name, "is changing gear to", gear_name)
+
+if __name__ == "__main__":
+    c = Car("Mustang 5.0 GT Coupe", "Ford", "Red", 2017) 
+
+# a new car has been created. name: Mustang 5.0 GT Coupe
+# it has 4 wheels
+# the car was built in 2017
