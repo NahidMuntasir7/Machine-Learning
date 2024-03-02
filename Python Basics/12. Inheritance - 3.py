@@ -36,7 +36,7 @@ class AjobTurtle(turtle.Turtle):
         print("i won't turn right, because i am ajob!")
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     montu = AjobTurtle() # AjobTurtle
     montu.left(30)
     montu.forward(200)
