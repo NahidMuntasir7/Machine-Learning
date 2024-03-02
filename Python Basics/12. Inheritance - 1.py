@@ -108,6 +108,7 @@ class Car(Vehicle):  # Car class inherits Vehicle class
         print("a new car has been created. name:", self.name)
         print("it has", self.wheels, "wheels")
         print("the car was built in", self.year)
+        
     def change_gear(self, gear_name):
         """method of changing gear"""
         print(self.name, "is changing gear to", gear_name)
