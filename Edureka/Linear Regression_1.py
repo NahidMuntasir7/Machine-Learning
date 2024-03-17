@@ -57,3 +57,15 @@ plt.xlabel('Head Size in cm3')
 plt.ylabel('Brain weight in grams')
 plt.legend()
 plt.show()
+
+
+# finding the R^2
+ss_t = 0
+ss_r = 0
+
+for i in range(m):
+  y_pred = b0 + b1 * X[i]
+  ss_t += (Y[i] - mean_y) ** 2
+  ss_r += (Y[i] - y_pred) ** 2
+r2 = 1 - (ss_r / ss_t)
+print(r2)
