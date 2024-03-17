@@ -69,3 +69,25 @@ for i in range(m):
   ss_r += (Y[i] - y_pred) ** 2
 r2 = 1 - (ss_r / ss_t)
 print(r2)
+
+
+
+
+# by using the libraries
+
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# cannot use rank 1 matrix in scikit learn
+X = X.reshape((m, 1))
+# creating model
+reg = LinearRegression()
+# fitting training data
+reg = reg.fit(X, Y)
+# Y Prediction
+Y_pred = reg.predict(X)
+
+# calculating R2 score
+r2_score = reg.score(X, Y)
+print(r2_score)
+
