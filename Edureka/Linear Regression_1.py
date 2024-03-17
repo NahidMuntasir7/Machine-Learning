@@ -19,7 +19,7 @@ Y = data['Brain Weight(grams)'].values
 
 # mean of X and Y
 mean_x = np.mean(X)
-mean_y = np.mean(y)
+mean_y = np.mean(Y)
 
 # total number of values
 n = len(X)
