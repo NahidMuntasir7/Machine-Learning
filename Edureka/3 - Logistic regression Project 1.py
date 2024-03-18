@@ -1,6 +1,6 @@
 # logistic regression : will predict survived or not - yes or no? 
 # what factors made people more likely to survive of the titanic
-# survived is the discrete column / categorical column
+# survived is the discrete column / categorical column / y
 
 
 import pandas as pd
