@@ -4,7 +4,7 @@
 # ..... :\
 
 
-# implementation by sklearn
+# implementing by sklearn
 
 from sklearn import datasets
 from sklearn import metrics
