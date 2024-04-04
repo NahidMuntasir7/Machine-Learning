@@ -133,6 +133,17 @@ text = "multiple phone numbers, 01711111111, 01811111111, 01910101010, 000000000
 result = re.findall(r'\d{3}\s*\d{8}', text)
 print(result) #  ['01711111111', '01811111111', '01910101010', '00000000000']
 
+# but 00000000000 is not a number... so we need to update a logic
+
+result = re.findall(r'\01[56789]\s*\d{8}', text) # will take 015, 016 ..... 019 type of number
+
+
+# now we will read a multiline file and store each string in a string
+
+# ^ mane start and $ end: book 83 page
+
+
+
 
 
 
