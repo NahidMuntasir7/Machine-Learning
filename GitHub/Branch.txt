@@ -1,0 +1,17 @@
+branch create: git branch name
+branch check: git branch
+
+
+pushing in the branch: 
+
+branch check: git branch
+add: git add .
+git commit -m "message" 
+git push -u origin branch_name
+
+
+then...
+
+branch check: git branch
+go to main branch: git checkout main
+Merge Requset in GitHub and then: git pull
